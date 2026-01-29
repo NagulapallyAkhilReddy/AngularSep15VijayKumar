@@ -20,6 +20,7 @@ export class Second {
   firstName:String="";
   lastName:String="";
   email:String="";
+  isDisabled: boolean;
 
   constructor() {
     //static data
@@ -27,11 +28,13 @@ export class Second {
     this.firstName="Akhil";
     this.lastName ="Reddy";
     this.email="akhilreddynagulapally.nle@gmail.com";
+    this.isDisabled=false;
 
     //Dynamic Data
     setInterval(()=>{
       let currentDate=new Date();
       this.dateString=currentDate.toDateString()+" "+currentDate.toTimeString();
+      this.isDisabled=Math.random()>0.5?true:false;
     },1000);
     // let currentDate=new Date();
     // this.dateString=currentDate.toDateString()+" "+currentDate.toTimeString();
