@@ -4,5 +4,7 @@
 <p>firstName:{{firstName}}</p>
 <p>lastName:{{lastName}}</p>
 <p>email:{{email}}</p>
+  display: <input type="text" #myInput />
 <p>Current Date and Time: {{dateString}}</p>
-<button id="btnid" [disabled]="isDisabled">click me</button>
+<button id="btnid" [disabled]="isDisabled" (click)="onButtonClick(myInput.value)" >click me</button>
+<p>{{display}} is mine</p>

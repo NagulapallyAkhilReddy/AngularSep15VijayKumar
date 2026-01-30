@@ -21,6 +21,7 @@ export class Second {
   lastName:String="";
   email:String="";
   isDisabled: boolean;
+  display: String;
 
   constructor() {
     //static data
@@ -29,6 +30,7 @@ export class Second {
     this.lastName ="Reddy";
     this.email="akhilreddynagulapally.nle@gmail.com";
     this.isDisabled=false;
+    this.display="";
 
     //Dynamic Data
     setInterval(()=>{
@@ -38,6 +40,10 @@ export class Second {
     },1000);
     // let currentDate=new Date();
     // this.dateString=currentDate.toDateString()+" "+currentDate.toTimeString();
+  }
+  onButtonClick(value:String){
+    alert("Button Clicked! "+value);
+    this.display=value;
   }
 
 }
