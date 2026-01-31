@@ -8,3 +8,5 @@
 <p>Current Date and Time: {{dateString}}</p>
 <button id="btnid" [disabled]="isDisabled" (click)="onButtonClick(myInput.value)" >click me</button>
 <p>{{display}} is mine</p>
+<input type="text" [(ngModel)]="twoWayDataBinding" />
+<p>is twoWayDataBinding working:{{twoWayDataBinding}}</p>

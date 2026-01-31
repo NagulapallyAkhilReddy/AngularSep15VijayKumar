@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-second',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './second.html',
   styleUrl: './second.css',
 })
@@ -22,6 +23,7 @@ export class Second {
   email:String="";
   isDisabled: boolean;
   display: String;
+  twoWayDataBinding:String="";
 
   constructor() {
     //static data
@@ -31,6 +33,7 @@ export class Second {
     this.email="akhilreddynagulapally.nle@gmail.com";
     this.isDisabled=false;
     this.display="";
+    this.twoWayDataBinding="Two Way Data Binding Example";
 
     //Dynamic Data
     setInterval(()=>{
