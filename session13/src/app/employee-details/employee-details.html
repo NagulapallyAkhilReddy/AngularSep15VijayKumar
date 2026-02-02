@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th>Address</th>
+      <th>Phone Numbers</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let employee of empInput">
+      <td>{{ employee.empName }}</td>
+      <td>{{ employee.empSalary }}</td>
+      <td [ngSwitch]="employee.empDept">
+        <span *ngSwitchCase="'1'">IT Department</span>
+        <span *ngSwitchCase="'2'">HR Department</span>
+        <span *ngSwitchCase="'3'">Sales Department</span>
+        <span *ngSwitchDefault>Other Department</span>
+      <td>
+        {{employee.empAddress}}
+      </td>
+      <td>
+        {{employee.empPhones}}
+      </td>
+    </tr>
+  </tbody>
+</table>

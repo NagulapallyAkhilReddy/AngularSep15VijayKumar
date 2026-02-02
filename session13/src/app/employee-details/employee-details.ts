@@ -1,26 +1,19 @@
 import { Component } from '@angular/core';
-import { Second } from '../second/second';
 import { employee } from '../employee';
-import { VisitingComponent } from '../visiting-component/visiting-component';
-import { EmployeeDetails } from '../employee-details/employee-details';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-first',
-  imports: [EmployeeDetails],
-  templateUrl: './first.html',
-  styleUrl: './first.css',
+  selector: 'app-employee-details',
+  imports: [CommonModule],
+  templateUrl: './employee-details.html',
+  styleUrl: './employee-details.css',
 })
-export class First {
+export class EmployeeDetails {
 
-  // empInput:employee=new employee();
   empInput:employee[]=[];
-  constructor(){
-    // this.empInput.empName="Akhil Reddy";
-    // this.empInput.empSalary="50000";
-    // this.empInput.empDept="1";
-    // this.empInput.empAddress=["123 Main St","456 Oak St"];
-    // this.empInput.empPhones=[1234567890,9876543210];
-    this.empInput=[
+  ngOnInit(){
+
+  this.empInput=[
       {
         empName:"Akhil Reddy",
         empSalary:"50000",
