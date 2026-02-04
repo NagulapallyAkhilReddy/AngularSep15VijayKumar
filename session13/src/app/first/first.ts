@@ -3,10 +3,11 @@ import { Second } from '../second/second';
 import { employee } from '../employee';
 import { VisitingComponent } from '../visiting-component/visiting-component';
 import { EmployeeDetails } from '../employee-details/employee-details';
+import { LatestData } from '../latest-data/latest-data';
 
 @Component({
   selector: 'app-first',
-  imports: [EmployeeDetails],
+  imports: [LatestData],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })

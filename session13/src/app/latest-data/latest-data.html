@@ -1,0 +1,38 @@
+<table>
+ <thead>
+  <tr>
+   <th>Employee ID</th>
+    <th>Employee Name</th>
+    <th>Employee Title</th>
+    <th>Employee Salary</th>
+    <th>Employee Department</th>
+    <th>Employee Address</th>
+    <th>Employee DOB</th>
+    <th>Employee Gender</th>
+  </tr>
+ </thead>
+
+ <tbody>
+
+  <tr *ngFor="let emp of employess">
+   <td>{{emp.empid}}</td>
+   <td>{{emp.empname}}</td>
+   <td>{{emp.title}}</td>
+   <td>{{emp.salary}}</td>
+   <td>
+    <div [ngSwitch]="emp.department">
+     <span *ngSwitchCase="'1'">Information Technology</span>
+     <span *ngSwitchCase="'2'">Human Resources</span>
+     <span *ngSwitchCase="'3'">Sales Department</span>
+     <span *ngSwitchDefault>Other Department</span>
+    </div>
+   </td>
+   <td *ngIf="emp.address.length > 0">{{emp.address}}</td>
+   <td>{{emp.dob }}</td>
+   <td>{{emp.gender}}</td>
+
+ </tbody>
+
+</table>
+
+<button (click)="getLatestData()">Refresh Data</button>
