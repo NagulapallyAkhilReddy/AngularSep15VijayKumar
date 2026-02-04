@@ -9,12 +9,13 @@
     <th>Employee Address</th>
     <th>Employee DOB</th>
     <th>Employee Gender</th>
+    <th>Index</th>
   </tr>
  </thead>
 
  <tbody>
 
-  <tr *ngFor="let emp of employess">
+  <tr *ngFor="let emp of employess; trackBy:trackByEmpcode; let i = index">
    <td>{{emp.empid}}</td>
    <td>{{emp.empname}}</td>
    <td>{{emp.title}}</td>
@@ -30,6 +31,7 @@
    <td *ngIf="emp.address.length > 0">{{emp.address}}</td>
    <td>{{emp.dob }}</td>
    <td>{{emp.gender}}</td>
+   <td>{{i}}</td>
 
  </tbody>
 

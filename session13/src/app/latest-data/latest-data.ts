@@ -75,4 +75,8 @@ export class LatestData {
      ];
   }
 
+  trackByEmpcode(index: number, emp: any): string {
+    return emp.code;
+  }
+
 }
