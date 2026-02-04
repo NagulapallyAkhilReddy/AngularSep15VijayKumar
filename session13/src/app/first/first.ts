@@ -4,10 +4,11 @@ import { employee } from '../employee';
 import { VisitingComponent } from '../visiting-component/visiting-component';
 import { EmployeeDetails } from '../employee-details/employee-details';
 import { LatestData } from '../latest-data/latest-data';
+import { DefaultPipe } from '../default-pipe/default-pipe';
 
 @Component({
   selector: 'app-first',
-  imports: [LatestData],
+  imports: [DefaultPipe],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })
