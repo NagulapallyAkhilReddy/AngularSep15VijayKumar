@@ -5,10 +5,11 @@ import { VisitingComponent } from '../visiting-component/visiting-component';
 import { EmployeeDetails } from '../employee-details/employee-details';
 import { LatestData } from '../latest-data/latest-data';
 import { DefaultPipe } from '../default-pipe/default-pipe';
+import { EmployeeCount } from '../employee-count/employee-count';
 
 @Component({
   selector: 'app-first',
-  imports: [DefaultPipe],
+  imports: [LatestData],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })

@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TitlePipe } from '../title-pipe';
+import { EmployeeCount } from '../employee-count/employee-count';
 
 @Component({
   selector: 'app-latest-data',
-  imports: [CommonModule],
+  imports: [CommonModule, TitlePipe,EmployeeCount],
   templateUrl: './latest-data.html',
-  styleUrl: './latest-data.css',
+  styleUrls: ['./latest-data.css'],
 })
 export class LatestData {
   employess: { empid: string; empname: string; gender: string; title: string; salary: string; department: string; address: string; dob: string; }[];
@@ -77,6 +79,18 @@ export class LatestData {
 
   trackByEmpcode(index: number, emp: any): string {
     return emp.code;
+  }
+
+  totalEmpCount(){
+    return this.employess.length;
+  }
+
+  totalMaleCount(){
+    return this.employess.filter(e=>e.gender=='Male').length;
+  }
+
+  totalFemaleCount(){
+    return this.employess.filter(e=>e.gender=='Female').length;
   }
 
 }

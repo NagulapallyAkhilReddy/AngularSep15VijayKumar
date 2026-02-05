@@ -1,4 +1,8 @@
-<table>
+
+ <app-employee-count [all]="totalEmpCount()"
+ [male]="totalMaleCount()",
+ [female]="totalFemaleCount()"></app-employee-count>
+ <br><br><table>
  <thead>
   <tr>
    <th>Employee ID</th>
@@ -17,8 +21,8 @@
 
   <tr *ngFor="let emp of employess; trackBy:trackByEmpcode; let i = index">
    <td>{{emp.empid}}</td>
-   <td>{{emp.empname}}</td>
-   <td>{{emp.title}}</td>
+   <td>{{emp.empname |uppercase | title:emp.gender}}</td>
+   <td>{{emp.title | uppercase  }}</td>
    <td>{{emp.salary}}</td>
    <td>
     <div [ngSwitch]="emp.department">

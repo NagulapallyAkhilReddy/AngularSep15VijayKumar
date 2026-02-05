@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-employee-count',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './employee-count.css',
 })
 export class EmployeeCount {
+
+  @Input()
+  all:number=20;
+
+  @Input()
+  male:number=10;
+
+  @Input()
+  female:number=10;
 
 }
