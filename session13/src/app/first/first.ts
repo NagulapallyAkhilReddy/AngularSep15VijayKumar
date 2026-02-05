@@ -6,10 +6,11 @@ import { EmployeeDetails } from '../employee-details/employee-details';
 import { LatestData } from '../latest-data/latest-data';
 import { DefaultPipe } from '../default-pipe/default-pipe';
 import { EmployeeCount } from '../employee-count/employee-count';
+import { Products } from '../products/products';
 
 @Component({
   selector: 'app-first',
-  imports: [LatestData],
+  imports: [LatestData,Products],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })
