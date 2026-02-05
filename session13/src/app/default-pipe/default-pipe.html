@@ -1,8 +1,10 @@
 <h1>Angular Default Pipes Introduction</h1>
 
-<p>the actual value is: {{var1}} and the transformed value is: {{var1 | uppercase}}</p>
+<p>the actual value is: {{var1}} and the transformed value is: {{var1 | uppercase | reverse}}, it has been reversed by using Custom pipe </p>
 <p>the actual value is: {{var1}} and the transformed value is: {{var1 | lowercase}}</p>
 <p>the actual value is: {{var2}} and the transformed value is: {{var2 | number:'1.2-3'}}</p>
 <p>the actual value is: {{var3}} and the transformed value is: {{var3 | number:'1.0-2'}}</p>
 <!-- <p>the actual value is: {{var4}} and the transformed value is: {{var4 | date:'fullDate'}}</p> -->
  <p>the actual value is: {{var5}} and the transformed value is: {{var5 | titlecase}}</p>
+ <p>the actual value is :{{var6}} and the transformed value is : {{var6 | age}}</p>
+ <p>the json pipe is used here : {{var7| json}}</p>
