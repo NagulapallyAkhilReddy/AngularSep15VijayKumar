@@ -11,6 +11,7 @@ import { EmployeeCount } from '../employee-count/employee-count';
 })
 export class LatestData {
   employess: { empid: string; empname: string; gender: string; title: string; salary: string; department: string; address: string; dob: string; }[];
+  radioButtonValue: string='all';
 
   
   constructor(){
@@ -91,6 +92,11 @@ export class LatestData {
 
   totalFemaleCount(){
     return this.employess.filter(e=>e.gender=='Female').length;
+  }
+
+  onCountRadioButtonChange(value:string){
+    console.log("The value that was selected is: " + value);
+    this.radioButtonValue=value;
   }
 
 }

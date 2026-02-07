@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-count',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './employee-count.html',
   styleUrl: './employee-count.css',
 })
@@ -16,5 +17,15 @@ export class EmployeeCount {
 
   @Input()
   female:number=10;
+
+  radioButtonValue:string='all';
+
+  @Output()
+  countRadioButtonChange:EventEmitter<string>=new EventEmitter<string>();
+
+
+  onRadioButtonChange(value:string){
+    this.countRadioButtonChange.emit(value);
+  }
 
 }

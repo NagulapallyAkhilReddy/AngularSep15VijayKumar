@@ -1,7 +1,9 @@
 
  <app-employee-count [all]="totalEmpCount()"
- [male]="totalMaleCount()",
- [female]="totalFemaleCount()"></app-employee-count>
+ [male]="totalMaleCount()"
+ [female]="totalFemaleCount()"
+ (countRadioButtonChange)="onCountRadioButtonChange($event)"
+ ></app-employee-count>
  <br><br><table>
  <thead>
   <tr>
@@ -19,7 +21,8 @@
 
  <tbody>
 
-  <tr *ngFor="let emp of employess; trackBy:trackByEmpcode; let i = index">
+  <ng-container *ngFor="let emp of employess; trackBy:trackByEmpcode; let i = index">
+  <tr *ngIf="emp.gender==radioButtonValue || radioButtonValue=='all'">
    <td>{{emp.empid}}</td>
    <td>{{emp.empname |uppercase | title:emp.gender}}</td>
    <td>{{emp.title | uppercase  }}</td>
@@ -36,6 +39,8 @@
    <td>{{emp.dob }}</td>
    <td>{{emp.gender}}</td>
    <td>{{i}}</td>
+  </tr>
+  </ng-container>
 
  </tbody>
 
