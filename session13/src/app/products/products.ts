@@ -19,6 +19,7 @@ export class Products {
   stock: string;
   description: string;
 }[] = [];
+  selectedCategory: string='All';
 
 constructor() {
   this.allProducts = [
@@ -70,6 +71,15 @@ totalWearablesCount():number{
 }
 totalNetworkingCount():number{
   return this.allProducts.filter(product => product.category === 'Networking').length;
+}
+
+trackByProductId(index: number, product: any): string {
+  return product.productId;
+}
+
+onCategoryChange(value:string){
+  console.log("The value that was selected is: " + value);
+  this.selectedCategory=value;
 }
 
 

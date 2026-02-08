@@ -1,9 +1,11 @@
 <span>show:</span>
-<input type="radio" name="options" value="electronics">
+<input type="radio" name="options" value="Electronics" (change)="onCategoryChange()" [(ngModel)]="selectedCategory" />
 <span>{{'Electronics:('+Electronics+' )'}}</span>
-<input type="radio" name="options" value="wearables">
+<input type="radio" name="options" value="Wearables" (change)="onCategoryChange()" [(ngModel)]="selectedCategory" />
 <span>{{'Wearables:('+Wearables+' )'}}</span>
-<input type="radio" name="options" value="accessories">
+<input type="radio" name="options" value="Accessories" (change)="onCategoryChange()" [(ngModel)]="selectedCategory" />
 <span>{{'Accessories:('+Accessories+' )'}}</span>
-<input type="radio" name="options" value="networking">  
+<input type="radio" name="options" value="Networking" (change)="onCategoryChange()" [(ngModel)]="selectedCategory" />  
 <span>{{'Networking:('+Networking+' )'}}</span>
+<input type="radio" name="options" value="All" (change)="onCategoryChange()" [(ngModel)]="selectedCategory" />
+<span>{{'All:('+All+' )'}}</span>

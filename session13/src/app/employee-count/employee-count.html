@@ -1,7 +1,7 @@
 <span>show:</span>
-<input type="radio" name="options" value="Male" (change)="onRadioButtonChange($event.target.value)" [(ngModel)]="radioButtonValue" />
+<input type="radio" name="options" value="Male" (change)="onRadioButtonChange()" [(ngModel)]="radioButtonValue" />
 <span>{{'Male:('+male+' )'}}</span>
-<input type="radio" name="options" value="Female" (change)="onRadioButtonChange($event.target.value)" [(ngModel)]="radioButtonValue" />
+<input type="radio" name="options" value="Female" (change)="onRadioButtonChange()" [(ngModel)]="radioButtonValue" />
 <span>{{'Female:('+female+') '}}</span>
-<input type="radio" name="options" value="all" (change)="onRadioButtonChange($event.target.value)" [(ngModel)]="radioButtonValue" />
+<input type="radio" name="options" value="all" (change)="onRadioButtonChange()" [(ngModel)]="radioButtonValue" />
 <span>{{'All:('+all+' )'}}</span>

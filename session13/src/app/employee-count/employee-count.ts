@@ -24,8 +24,8 @@ export class EmployeeCount {
   countRadioButtonChange:EventEmitter<string>=new EventEmitter<string>();
 
 
-  onRadioButtonChange(value:string){
-    this.countRadioButtonChange.emit(value);
+  onRadioButtonChange(){
+    this.countRadioButtonChange.emit(this.radioButtonValue);
   }
 
 }
