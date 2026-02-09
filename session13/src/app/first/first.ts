@@ -7,10 +7,12 @@ import { LatestData } from '../latest-data/latest-data';
 import { DefaultPipe } from '../default-pipe/default-pipe';
 import { EmployeeCount } from '../employee-count/employee-count';
 import { Products } from '../products/products';
+import { FormsModule } from '@angular/forms';
+import { Cclogo } from '../cclogo';
 
 @Component({
   selector: 'app-first',
-  imports: [LatestData,Products],
+  imports: [FormsModule,Cclogo],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })
@@ -18,6 +20,7 @@ export class First {
 
   // empInput:employee=new employee();
   empInput:employee[]=[];
+  cardNumber:string='';
   constructor(){
     // this.empInput.empName="Akhil Reddy";
     // this.empInput.empSalary="50000";
