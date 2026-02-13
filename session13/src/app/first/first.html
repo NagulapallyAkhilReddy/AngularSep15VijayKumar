@@ -6,8 +6,14 @@
 <!-- <app-default-pipe></app-default-pipe> -->
 <!-- <app-products></app-products> -->
 
-<h1>This is an Angular Directives Example</h1>
+<!-- <h1>This is an Angular Directives Example</h1>
 
 cardnumber: <input type="text" [(ngModel)]="cardNumber">
 
-<img appCclogo [cardNumber]="cardNumber" alt="card logo" >
+<img appCclogo [cardNumber]="cardNumber" alt="card logo" > 
+
+<app-lifecycle></app-lifecycle> -->
+
+<input type="text" [(ngModel)]="userText">
+<input type="text" [(ngModel)]="anotherUserText">
+<app-simplechange [simpleInput]="userText" [anotherInput]="anotherUserText"></app-simplechange>

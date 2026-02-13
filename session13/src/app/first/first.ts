@@ -9,10 +9,13 @@ import { EmployeeCount } from '../employee-count/employee-count';
 import { Products } from '../products/products';
 import { FormsModule } from '@angular/forms';
 import { Cclogo } from '../cclogo';
+import { Lifecycle } from '../lifecycle/lifecycle';
+import { Simplechange } from '../simplechange/simplechange';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-first',
-  imports: [FormsModule,Cclogo],
+  imports: [FormsModule,Cclogo,Lifecycle,CommonModule,Simplechange],
   templateUrl: './first.html',
   styleUrl: './first.css',
 })
@@ -21,6 +24,8 @@ export class First {
   // empInput:employee=new employee();
   empInput:employee[]=[];
   cardNumber:string='';
+  userText:string='';
+  anotherUserText:string='';
   constructor(){
     // this.empInput.empName="Akhil Reddy";
     // this.empInput.empSalary="50000";
